@@ -16,11 +16,7 @@ Route::middleware(['public'])->group(function () {
         return view('index');
     });
     Route::get('/auth/github', 'Auth\LoginController@redirectToProvider');
-    Route::get('/auth/github/callback', 'Auth\LoginController@handleProviderCallback');
-});
-
-Route::get('/test', function() {
-    echo session('user_token');
+    Route::get('/auth/github/callback', 'Auth\LoginController@handleProviderCallback')->name('auth.callback');
 });
 
 Route::middleware(['auth.custom'])->group(function() {

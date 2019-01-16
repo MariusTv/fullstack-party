@@ -69,16 +69,6 @@ class IssuePage extends React.Component {
         return (
             <div className="content-container--issue">
                 {content}
-                {/*<div className="content-container">*/}
-                    {/*<Link className="button-link" to={'/'}>*/}
-                        {/*<img src="/images/back-arrow.png" alt="Back to issues" />*/}
-                        {/*Back to Issues*/}
-                    {/*</Link>*/}
-                    {/*{issue}*/}
-                    {/*<div>*/}
-                        {/*{comments}*/}
-                    {/*</div>*/}
-                {/*</div>*/}
             </div>
         );
     }
