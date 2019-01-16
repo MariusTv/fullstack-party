@@ -1,0 +1,527 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+a:focus {
+  outline: 0;
+}
+
+.box-layout {
+  align-items: center;
+  background: url("/images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.box-layout__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  text-align: center;
+}
+
+@media (min-width: 45rem) {
+  .box-layout__box {
+    width: 40rem;
+  }
+}
+
+.box-layout__box img {
+  margin-bottom: 4.8rem;
+}
+
+.button {
+  background-color: #9fd533;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  height: 5.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.2rem;
+  text-decoration: none;
+  width: 25rem;
+}
+
+@media (min-width: 45rem) {
+  .button {
+    width: 35rem;
+  }
+}
+
+.button:hover {
+  background-color: #86b300;
+}
+
+.button-link {
+  align-items: center;
+  color: #86b300;
+  display: flex;
+  margin: 1.6rem 0;
+  text-decoration: none;
+}
+
+.button-link img {
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 45rem) {
+  .button-link {
+    margin: 3.2rem 0;
+  }
+
+  .button-link:hover {
+    text-decoration: underline;
+  }
+}
+
+.content-container {
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  max-width: 90rem;
+}
+
+.content-container--issue {
+  border-top: 1px solid #e8e8e8;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: #fff;
+  height: 9.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 3.2rem;
+}
+
+.header__button {
+  background: url("/images/logout.png") no-repeat right center;
+  border: none;
+  color: #2F3254;
+  padding-left: 3.2rem;
+  height: 3rem;
+  width: 9rem;
+  text-decoration: none;
+}
+
+@media (min-width: 45rem) {
+  .header__button {
+    background: url("/images/logout.png") no-repeat left center;
+  }
+
+  .header__button:hover {
+    background: url("/images/logout-hover.png") no-repeat left center;
+    color: #99cc33;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 45rem) {
+  .row {
+    flex-wrap: nowrap;
+  }
+}
+
+.column {
+  margin: 0 auto;
+  flex: 50%;
+  padding: 0 1.2rem;
+}
+
+@media (min-width: 45rem) {
+  .column {
+    padding: 0 1.6rem;
+  }
+}
+
+.list-body {
+  border-top: 1px solid #e8e8e8;
+  background-color: #f5f5f5;
+  order: 2;
+  width: 100%;
+}
+
+@media (min-width: 45rem) {
+  .list-body {
+    order: 1;
+  }
+}
+
+.list-categories {
+  align-items: center;
+  height: 7rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list-categories img {
+  width: 1.6rem;
+  height: 1.6rem;
+  vertical-align: middle;
+}
+
+.list-categories span {
+  padding-left: 0.5rem;
+  padding-right: 1.2rem;
+}
+
+.list-categories span:hover {
+  cursor: pointer;
+  color: #99cc33;
+}
+
+.list-categories span.active {
+  color: #99cc33;
+}
+
+.list-categories__button {
+  background: none;
+  border: none;
+}
+
+.list-background {
+  align-items: center;
+  background: url("/images/issues-bg.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  justify-content: center;
+  width: 100vw;
+  order: 1;
+  text-align: center;
+}
+
+@media (min-width: 45rem) {
+  .list-background {
+    order: 2;
+    height: 100vh;
+  }
+}
+
+.list-background__title,
+.list-background__subtitle {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.list-background__subtitle {
+  font-size: 2rem;
+}
+
+.list-background__subtitle img {
+  width: 7rem;
+}
+
+.list-item {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  margin-bottom: 1.6rem;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.list-item__body {
+  flex-direction: column;
+  flex-grow: 2;
+  padding-right: 1.2rem;
+  margin-top: -0.5rem;
+}
+
+.list-item__status-open,
+.list-item__status-closed {
+  background: url("/images/issue-exclamation.png") no-repeat center top;
+  height: 1.6rem;
+  min-width: 1.6rem;
+  padding: 1.6rem;
+}
+
+@media (min-width: 45rem) {
+  .list-item__status-open,
+  .list-item__status-closed {
+    padding-left: 3.2rem;
+  }
+}
+
+.list-item__status-closed {
+  background: url("/images/status-closed.png");
+}
+
+.list-item__title {
+  padding-bottom: 1.2rem;
+}
+
+.list-item__title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-item__sub-title {
+  color: #999;
+  font-size: 1.4rem;
+}
+
+.list-item__comments {
+  align-items: flex-start;
+  align-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 0.8;
+  padding-right: 1.2rem;
+}
+
+.list-item__comments img {
+  padding-right: 0.5rem;
+}
+
+.list-item__comments:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 45rem) {
+  .list-item__comments {
+    min-width: 2.5rem;
+  }
+}
+
+.list-item__label {
+  padding: 0 0.5rem;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-left: 0.5rem;
+}
+
+.issue {
+  background-color: #fff;
+  padding: 3.2rem;
+  border: 1px solid #ededed;
+  border-top: none;
+  border-radius: 5px;
+  margin-bottom: 3.2rem;
+}
+
+.issue__title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 1.6rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.issue__title span {
+  color: #999;
+}
+
+@media (min-width: 45rem) {
+  .issue__title {
+    font-size: 2rem;
+  }
+}
+
+.issue__state-open,
+.issue__state-closed {
+  background: #9fd533 url("/images/status-open-white.png") no-repeat 10% 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #fff;
+  margin-right: 1.2rem;
+  padding: 0.3rem 0.5rem;
+  padding-left: 2.7rem;
+}
+
+.issue__state-closed {
+  background: #9fd533 url("/images/status-closed.png") no-repeat 10% 50%;
+}
+
+.issue__subtitle {
+  color: #999;
+  font-size: 1.4rem;
+}
+
+.comment-container {
+  display: flex;
+}
+
+.comment {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-top: none;
+  border-radius: 5px;
+  color: #666;
+  flex-grow: 9;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+@media (min-width: 45rem) {
+  .comment :after {
+    right: 100%;
+    border: 1rem solid transparent;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    margin-top: -1rem;
+    top: 2rem;
+  }
+}
+
+.comment__header {
+  border-bottom: 1px solid #ededed;
+  padding: 1.6rem 1.6rem;
+}
+
+.comment__header img {
+  vertical-align: middle;
+}
+
+.comment__body {
+  padding: 1.6rem;
+  word-break: break-word;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 2.5rem;
+  margin-right: 1.2rem;
+}
+
+@media (min-width: 45rem) {
+  .user-avatar {
+    height: 5rem;
+    margin-right: 1.6rem;
+  }
+}
+
+.author {
+  text-decoration: none;
+  color: #86b300;
+}
+
+.author:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pagination-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 44.99rem) {
+  .pagination__page,
+  .pagination__page-active {
+    display: none;
+  }
+}
+
+.pagination__page a,
+.pagination__page-active a {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 3.5rem;
+  margin-right: 0.5rem;
+  width: 3.5rem;
+}
+
+.pagination__page a:hover,
+.pagination__page-active a:hover {
+  background-color: #9fd533;
+  color: #fff;
+}
+
+.pagination__page-active {
+  display: block;
+}
+
+.pagination__page-active a {
+  background-color: #9fd533;
+  color: #fff;
+  cursor: default;
+}
+
+.previous,
+.next {
+  color: #9fd533;
+  padding: 0 1.6rem;
+}
+
+.previous:hover,
+.next:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pagination__page-disabled {
+  display: none;
+}
+
+@media (min-width: 45rem) {
+  .show-for-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 44.99rem) {
+  .show-for-desktop {
+    display: none;
+  }
+}
+

@@ -1,0 +1,27 @@
+.header {
+  background-color: $white;
+  height: 9.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $l-size;
+}
+
+.header__button {
+  background: url('/images/logout.png') no-repeat right center;
+  border: none;
+  color: $font-color-dark-violet;
+  padding-left: $l-size;
+  height: 3rem;
+  width: 9rem;
+  text-decoration: none;
+
+  @media (min-width: $desktop-breakpoint) {
+    background: url('/images/logout.png') no-repeat left center;
+
+    &:hover {
+      background: url('/images/logout-hover.png') no-repeat  left center;
+      color: $font-color-light-green;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.list-body {
+  border-top: 1px solid darken($light-gray, 5%);
+  background-color: $light-gray;
+  order: 2;
+  width: 100%;
+
+  @media (min-width: $desktop-breakpoint) {
+    order: 1;
+  }
+}
+
+.list-categories {
+  align-items: center;
+  height: 7rem;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+    vertical-align: middle;
+  }
+
+  span {
+    padding-left: $xs-size;
+    padding-right: $s-size;
+    &:hover {
+      cursor: pointer;
+      color: $font-color-light-green;
+    }
+  }
+
+  span.active {
+    color: $font-color-light-green;
+  }
+}
+
+.list-categories__button {
+  background: none;
+  border: none;
+}
+
+.list-background {
+  align-items: center;
+  background: url('/images/issues-bg.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  justify-content: center;
+  width: 100vw;
+  order: 1;
+  text-align: center;
+
+  @media (min-width: $desktop-breakpoint) {
+    order: 2;
+    height: 100vh;
+  }
+}
+
+.list-background__title {
+  font-size: $font-size-xlarge;
+  font-weight: 300;
+  color: $white;
+}
+
+.list-background__subtitle {
+  @extend .list-background__title;
+  font-size: $font-size-large;
+
+  img {
+    width: 7rem;
+  }
+}
+
+.list-item {
+  background-color: $white;
+  border: 1px solid darken($light-gray, 5%);
+  border-radius: 5px;
+  color: $font-color-dark;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $s-size 0;
+  margin-bottom: $m-size;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.list-item__body {
+  flex-direction: column;
+  flex-grow: 2;
+  padding-right: $s-size;
+  margin-top: -$xs-size;
+}
+
+.list-item__status-open {
+  background: url('/images/issue-exclamation.png') no-repeat center top;
+  height: 1.6rem;
+  min-width: 1.6rem;
+  padding: $m-size;
+
+  @media (min-width: $desktop-breakpoint) {
+    padding-left: $l-size;
+  }
+}
+
+.list-item__status-closed {
+  @extend .list-item__status-open;
+  background: url('/images/status-closed.png');
+}
+
+.list-item__title {
+  padding-bottom: $s-size;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.list-item__sub-title {
+  color: $font-color-light;
+  font-size: $font-size-small;
+}
+
+.list-item__comments {
+  align-items: flex-start;
+  align-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 0.8;
+  padding-right: $s-size;
+
+  img {
+    padding-right: $xs-size;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    min-width: 2.5rem;
+  }
+}
+
+.list-item__label {
+  padding: 0 $xs-size;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(0,0,0, 0.25);
+  margin-left: $xs-size;
+}

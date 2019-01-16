@@ -1,0 +1,20 @@
+.user-avatar {
+  border-radius: 50%;
+  height: 2.5rem;
+  margin-right: $s-size;
+
+  @media (min-width: $desktop-breakpoint) {
+    height: 5rem;
+    margin-right: $m-size;
+  }
+}
+
+.author {
+  text-decoration: none;
+  color: $darker-green;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

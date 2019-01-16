@@ -1,0 +1,42 @@
+.button {
+  background-color: $light-green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  height: 5.5rem;
+  font-weight: bold;
+  font-size: $font-size-large;
+  padding: $s-size;
+  text-decoration: none;
+  width: 25rem;
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 35rem;
+  }
+
+  &:hover {
+    background-color: $darker-green;
+  }
+}
+
+.button-link {
+  align-items: center;
+  color: $darker-green;
+  display: flex;
+  margin: $m-size 0;
+  text-decoration: none;
+
+  img {
+    padding-right: $xs-size;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin: $l-size 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

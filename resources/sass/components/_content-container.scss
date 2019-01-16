@@ -1,0 +1,10 @@
+.content-container {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 90rem;
+}
+
+.content-container--issue {
+  border-top: 1px solid darken($light-gray, 5%);
+  background-color: $light-gray;
+}

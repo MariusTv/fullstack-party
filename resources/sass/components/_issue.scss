@@ -1,0 +1,44 @@
+.issue {
+  background-color: $white;
+  padding: $l-size;
+  border: 1px solid darken($light-gray, 3%);
+  border-top: none;
+  border-radius: 5px;
+  margin-bottom: $l-size;
+}
+
+.issue__title {
+  font-size: $font-size-large;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: $m-size;
+  color: $font-color-dark;
+  word-break: break-word;
+  span {
+    color: $font-color-light;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: $font-size-large;
+  }
+}
+
+.issue__state-open {
+  background: $light-green url('/images/status-open-white.png') no-repeat 10% 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: $white;
+  margin-right: $s-size;
+  padding: 0.3rem $xs-size;
+  padding-left: 2.7rem;
+}
+
+.issue__state-closed {
+  @extend .issue__state-open;
+  background: $light-green url('/images/status-closed.png') no-repeat 10% 50%;
+}
+
+.issue__subtitle {
+  color: $font-color-light;
+  font-size: $font-size-small;
+}

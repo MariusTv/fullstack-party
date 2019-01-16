@@ -1,0 +1,25 @@
+.box-layout {
+  align-items: center;
+  background: url('/images/bg.jpg');
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.box-layout__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  text-align: center;
+
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 40rem;
+  }
+
+  img {
+    margin-bottom: $xl-size;
+  }
+}

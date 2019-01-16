@@ -1,0 +1,46 @@
+.comment-container {
+  display: flex;
+}
+
+.comment {
+  background-color: $white;
+  border: 1px solid darken($light-gray, 3%);
+  border-top: none;
+  border-radius: 5px;
+  color: $font-color-medium;
+  flex-grow: 9;
+  margin-bottom: $m-size;
+  position: relative;
+
+  @media (min-width: $desktop-breakpoint) {
+    :after {
+      right: 100%;
+      border: 1rem solid transparent;
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: $white;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+
+      margin-top: -1rem;
+      top: 2rem;
+    }
+  }
+
+}
+
+.comment__header {
+  border-bottom: 1px solid darken($light-gray, 3%);
+  padding: $m-size $m-size;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.comment__body {
+  padding: $m-size;
+  word-break: break-word;
+}
